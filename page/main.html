@@ -364,8 +364,8 @@
 
         topShow == 8 ? topShow = 1 : topShow++
         $('.topRell_R li:eq(0) img,.topRell_R li:eq(1) img').fadeOut(1000, function() {$(this).remove()});
-        $('.topRell_R li:eq(0)').prepend($(`<img src="../img/main_topR_0${topShow}.jpg"/>`))
-        $('.topRell_R li:eq(1)').prepend($(`<img src="../img/main_topR_0${topShow+1}.jpg"/>`))
+        $('.topRell_R li:eq(0)').prepend($(`<img src="./img/main_topR_0${topShow}.jpg"/>`))
+        $('.topRell_R li:eq(1)').prepend($(`<img src="./img/main_topR_0${topShow+1}.jpg"/>`))
     }, 3000)
 
     $('.commCard img').click(function(){
