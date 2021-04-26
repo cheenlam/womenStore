@@ -1,0 +1,42 @@
+<div class="repwdBox">
+    <p class="repwdTitle">
+        <span class="icon-lock-open"></span>
+        重設密碼      
+    </p>
+
+    <div class="repwdIpt">
+        <ul>
+            <li>
+                <p>請輸入舊密碼</p>
+                <label>              
+                    <input type="password" required>
+                    <span class="icon-close-outline"></span>
+                </label>
+            </li>
+            <li>
+                <p>請輸入新密碼</p>
+                <label>          
+                    <input type="password" required>
+                    <span class="icon-close-outline"></span>
+                </label>
+            </li>
+            <li>
+                <p>再次輸入新密碼</p>
+                <label>          
+                    <input type="password" required>
+                    <span class="icon-close-outline"></span>
+                </label>
+            </li>
+        </ul>
+
+        <button>重設密碼</button>
+    </div>
+</div>
+
+
+<script>
+    $('.repwdIpt span').click(function(){
+        $(this).siblings('input').val('')
+    })
+
+</script>

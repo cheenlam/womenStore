@@ -1,0 +1,687 @@
+.checkBox{
+    padding: 50px 10px;
+}
+
+.checkTitle{
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ecebeb;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3493fb;
+}
+
+.checkBox h5{
+    font-size: 18px;
+    color: #333;
+    font-family: 'Playfair Display';
+}
+
+/* ===== checkStep (購物步驟) start ===== */
+.checkStep{
+    padding: 20px 0 50px;
+}
+
+.checkStep ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkStep li{
+    width: calc(100% / 4);
+    padding: 10px;
+    outline: 1px solid #fff;
+    font-size: 36px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: #B1B1B1;
+    font-family: 'Trajan Pro';
+    position: relative;
+}
+
+.checkStep li.on{
+    background-color: #A49178;
+}
+
+
+.checkStep div:first-child{
+    font-style: italic;
+    padding: 0 10px;
+}
+
+.checkStep div:nth-child(2){
+    line-height: 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkStep div:nth-child(2) span:nth-child(2){
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.checkStep li::before{
+    content: '\009B';
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+}
+
+.checkStep li:last-child::before{
+    content: '';
+}
+
+.checkStep li.on::before{
+    content: '\2713';
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* ===== checkList (購物清單) start ===== */
+.checkList{
+    padding: 0 10px;
+    position: relative;
+}
+
+.checkList h5{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.checkList table{
+    width: 100%;
+}
+
+.checkList tr{
+    border-bottom: 1px solid #eee;
+}
+
+.checkList tr:first-child{
+    border-bottom: 1px solid #999;
+}
+
+.checkList th{
+    width: 10%;
+    padding: 10px 0;
+}
+
+.checkList th:first-child{
+    width: 40%;
+}
+
+.checkList td{
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.checkList td:first-child{
+    display: flex;
+    text-align: left;
+}
+
+.checkImg{
+    width: 60px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.checkImg img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.checkList td>p{
+    color: #83521e;
+}
+
+.checkList td>p::before{
+    content: 'NT$ ';
+}
+
+.checkList .icon-bin{
+    font-size: 16px;
+    transition: color 0.3s linear;
+    cursor: pointer;
+}
+
+.checkList .icon-bin:hover{
+    color: #333;
+}
+
+.checkList>div{
+    padding: 20px 0 50px;
+    font-size: 10px;
+    color: #b5b5b5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkRem{
+    width: calc(100% - 300px);
+    padding: 0 15px;
+    color: #b5b5b5;
+    list-style-type: disc;
+}
+
+.checkRem li{
+    line-height: 20px;
+}
+
+.checkCount{
+    width: 300px;
+}
+
+.checkCount ul{ 
+    width: 100%;
+}
+
+.checkCount li{
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkCount span::before{
+    content: 'NT$ ';
+    font-size: 10px;
+}
+
+.checkCount li::before{
+    content: attr(data-title);
+}
+
+.checkCount li:nth-last-child(2){
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #999;
+}
+
+.checkCount .checkTotal{
+    padding-top: 10px;
+}
+
+.checkCount .checkTotal span{
+    font-size: 20px;
+    color: #83521e;
+}
+
+/* ===== checkTool (購物按鈕) start ===== */
+.checkTool{
+    border-top: 1px solid #999;
+    padding-top: 20px;
+}
+
+.checkTool ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.checkTool li{
+    padding: 15px 10px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.checkTool li.on{
+    display: block;
+}
+
+.checkTool a{
+    padding-bottom: 2px;
+}
+
+.checkTool a:hover{
+    color: #333;
+}
+
+.checkTool a:hover::after{
+    width: 100%;
+}
+
+.checkTool a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #8d8d8d;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.checkTool .checkBack::before{
+    content: '\008B';
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    top: 0;
+    bottom: 0px;
+    margin: auto;
+}
+
+.checkTool button{
+    width: 250px;
+    height: 40px;
+    border: 2px solid #333;
+    outline: none;
+    background-color: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.checkTool button:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.checkTool button:hover::before{
+    border: 2px solid transparent;
+}
+
+.checkTool button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+}
+
+/* ===== checkDely (選擇配送方式) start ===== */
+.checkDely{
+    padding: 50px 10px 100px;
+    display: none;
+}
+
+.checkDely.on{
+    display: block;
+}
+
+.checkDely ul{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 30px;
+    border-top: 1px solid #999; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkDely li{
+    width: calc(100% / 3);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    color: #555;
+}
+
+.checkDely p{
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+
+.checkDely select{
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 30px;
+    color: #333;
+    border: 1px solid #CCC7C7;
+    border-radius: 5px;
+}
+
+.checkDely select:focus{
+    border: 1px solid #3493fb;
+}
+
+.checkSel_02 option:not([data-number="0"]),
+.checkSel_03 option:not([data-number="0"]){
+    display: none;
+}
+
+/* ===== checkMsg (填寫訂單資料) start ===== */
+.checkMsg{
+    padding: 50px 10px 100px;
+    display: none;
+}
+
+.checkMsg.on{
+    display: block;
+}
+
+.checkMsg>div{
+    margin: 10px 0 20px;
+    border-top: 1px solid #999; 
+}
+
+.checkMsg>div ul{
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #555;
+    display: none;
+}
+
+.checkMsg>div ul.on{
+    display: flex;
+}
+
+.checkMsg>div ul:last-child{
+    border-top:none;
+}
+
+.checkMsg>div li{
+    width: 50%;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.checkMsg label{
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    flex-shrink: 0;
+}
+
+.checkMsg input + span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.checkMsg input + span:hover{
+    color: #666;
+}
+
+.checkMsg input:valid + span{
+    visibility: visible;
+}
+
+.checkMsg input{
+    width: calc(100% - 80px);
+    height: 35px;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+    color: #666;
+}
+
+.checkMsg input[type="text"],
+.checkMsg input[type="email"]{
+    padding-right: 30px;
+}
+
+.checkRemark textarea:focus,
+.checkMsg select:focus,
+.checkMsg input:focus{
+    border: 1px solid #3493fb;
+}
+
+.checkAdd{
+    line-height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkAdd input{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.checkMsg select{
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 30px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+}
+
+.checkTel{
+    display: flex;
+}
+
+.checkTel input{
+    width: 50px;
+    text-align: center;
+}
+
+.checkTel input + input{
+    margin-left: 5px;
+}
+
+.checkTel input:nth-child(3){
+    width: 100%;
+    text-align: left;
+}
+
+.checkRemark textarea{
+    width: 100%;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+    color: #666;
+    resize : none;
+}
+
+.checkMsg .checkStore,
+.checkMsg .checkRemark{
+    width: 100%;
+}
+
+.checkMsg .checkRem{
+    width: 100%;
+    font-size: 10px;
+}
+
+.checkMsg .checkStore{
+    flex-wrap: wrap;
+}
+
+.checkStore div{
+    width: 125px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px dashed #CCC7C7;
+    color: #999;
+}
+
+.checkStore div:last-child{
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.checkStore button{
+    width: 70px;
+    height: 35px;
+    margin-left: 5px;
+    border: 1px solid #CCC7C7;
+    outline: none;
+    background-color: #A49178;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkStore button:hover::before{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.checkStore button::before{
+    content: '選擇門市';
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #bbb;
+    color: #fff;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+
+/* checkOrder (確認訂單資料) start ===== */
+.checkOrder{
+    display: none;
+}
+
+.checkOrder.on{
+    display: block;
+}
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 970px){
+    .checkStep li{width: 50%;}
+
+    .checkList h5{
+        padding-bottom: 10px;
+        position: unset;
+        top: 0;
+        left: 0;
+    }
+
+    .checkList th{
+        display: none;
+    }
+
+    .checkList tr{
+        border: 1px solid #eee;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .checkList tr:first-child{
+        border:none;
+        border-bottom: 1px solid #999;
+    }
+
+    .checkList tr + tr{
+        margin-top: 10px;
+    }
+
+    .checkList td{
+        width: calc(100% / 3);
+        padding: 5px;
+        display: flex;
+    }
+
+    .checkList td:first-child{
+        width: 100%;
+        padding: 10px 45px 10px 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .checkList td::before{
+        content: attr(data-title);
+        color: #A49178;
+    }
+
+    .checkList .checkDel{
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        box-shadow: 0 0 5px #999;
+        border-radius: 50%;
+        top: 10px;
+        right: 10px;
+    }
+
+    .checkRem,
+    .checkCount{
+        width: 100%;
+    }
+
+    .checkCount{
+        padding-top: 50px;
+    }
+    
+    .checkDely li{
+        width: 100%;
+    }
+
+    .checkMsg>div li{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .checkMsg input + span{
+        right: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){  
+    .checkStep li{width: 100%;}
+    .checkTool ul{
+        flex-direction: column;
+    }
+    .checkTool .checkBtn{
+        width: 100%;
+    }
+
+    .checkTool button{
+        width: 100%;
+    }
+
+    .checkList td{
+        width: calc(100% / 2);
+    }
+    .checkRemark{
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    .checkAdd input{
+        width: 100%;
+        margin-left: 0;
+    }
+}

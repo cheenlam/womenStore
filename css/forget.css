@@ -1,0 +1,198 @@
+.forgetBox{
+    padding: 50px 10px;
+}
+
+.forgetBox>div{
+    display: none;
+}
+
+.forgetBox>div.on{
+    display: block;
+}
+
+.forgetTitle{
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ecebeb;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3493fb;
+}
+
+.forgetBox button{
+    height: 35px;
+    padding: 0 10px;
+    color: #969696;
+    border: 1px solid #CCC7C7;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.forgetBox button:hover{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+}
+
+/* ===== forgetStep start ===== */
+.forgetStep{
+    max-width: 600px;
+    margin: auto;
+}
+
+.forgetStep_list{
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgetStep_list h6{
+    padding: 20px 0;
+}
+
+.forgetStep_list li{
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+}
+
+.forgetStep_list div{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    background: linear-gradient(45deg,#3493fb,#ecebeb);
+    color: #fff;
+}
+
+.forgetStep_ipt{
+    width: 100%;
+    padding-top: 40px;
+    margin: auto;
+    text-align: right;
+}
+
+.forgetStep_ipt>div{
+    width: 100%;
+    position: relative;
+}
+
+.forgetStep_ipt p{
+    font-size: 12px;
+    color: #CCC7C7;
+    position: absolute;
+    bottom: -22px;
+    left: 0px;  
+}
+
+.forgetStep_ipt div>span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    
+}
+
+.forgetStep_ipt input + span{
+    visibility: hidden;
+}
+.forgetStep_ipt input:valid + span{
+    visibility: visible;
+}
+
+.forgetStep_ipt span:hover{
+    color: #666;
+}
+
+.forgetStep_ipt input{
+    width: 100%;
+    height: 35px;
+    padding: 0 8px;
+    margin: auto;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #CCC7C7;
+    color: #666;
+}
+
+.forgetStep_ipt input:focus{
+    border: 1px solid #3493fb;
+}
+
+.forgetStep_ipt input::-webkit-input-placeholder{
+    color: #CCC7C7;
+}
+
+.forgetStep_ipt button{
+    margin-top: 10px;
+}
+
+/* ===== forgetSend start ===== */
+.forgetSend{
+    max-width: 600px;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.forgetSend_ball{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    line-height: 60px;
+    text-align: center;
+    font-size: 45px;
+    color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 50%;
+}
+
+.forgetSend h6{
+    padding: 30px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.forgetSend p{
+    color: #b9b9b9;
+    text-align: left;
+}
+
+.forgetSend p>span{
+    padding-left: 5px;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+.forgetSend_btn{
+    padding-top: 50px;
+    text-align: right;
+}
+
+.forgetSend_btn button:disabled{
+    background-color: #ccc;
+    color: #fff;
+}
+
+.forgetSend_btn button:disabled:hover{
+     border: 1px solid #CCC7C7;
+}
+
+

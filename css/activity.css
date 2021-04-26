@@ -1,0 +1,120 @@
+.actBox {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.actSelect {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.actSelect ul {
+    width: 100%;
+    display: flex;
+}
+
+.actSelect li {
+    height: 70px;
+    line-height: 25px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #706E6C;
+    position: relative;
+    cursor: pointer;
+    flex: 1;
+}
+
+.actSelect li:hover {
+    background-color: #FAFAFA;
+}
+
+.actSelect li.on {
+    background-color: #ca3c3c;
+    color: #fff;
+}
+
+.actSelect li.on::before {
+    background-color: #ca3c3c;
+}
+
+.actSelect li.on h6 {
+    color: #fff;
+}
+
+.actSelect li.on::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #ca3c3c transparent transparent transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -10px;
+}
+
+.actSelect li+li::before {
+    content: '';
+    width: 1px;
+    height: 50px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.actSelect h6 {
+    color: #999;
+}
+
+.actTime {
+    padding: 15px 0 10px;
+    background-color: #FAFAFA;
+    color: #999;
+    text-align: center;
+}
+
+.actTime span {
+    padding: 0 5px;
+}
+
+
+.actBanner img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.actBox .commLayout {
+    padding: 20px 10px 10px;
+}
+
+.actBox .commList {
+    padding: 0 10px;
+}
+
+
+/* ========== RWD 設定 ========== */
+
+@media only screen and (max-width: 900px) {
+    .actSelect ul {
+        flex-wrap: wrap;
+    }
+
+    .actSelect li {
+        min-width: calc(100% / 3);
+        border-bottom: 1px solid #ccc;
+    }
+    .actSelect li:nth-child(4)::after {
+        display: none;
+    }
+    .actSelect li.on::after {
+        display: none;
+    }
+}

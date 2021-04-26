@@ -1,0 +1,145 @@
+.assortBox{
+    width: 100%;
+    padding: 40px 10px;
+    display: flex; 
+    position: relative;
+}
+
+.assortBox .crumbs{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ===== assortLeft start ===== */
+.assortLeft{
+    width: 150px;
+}
+
+.crumbs{
+    padding: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.crumbs ul{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.crumbs li{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.crumbs li:hover{
+    color: #83521e;
+}
+
+.crumbs li+li span::before{
+    content: '\00BB';
+    padding: 0 10px;
+}
+
+.assortList{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.assortList h5{
+    padding: 5px 0;
+    color: #555;
+    cursor: pointer;
+}
+
+.assortList h5::before{
+    content: '\2022';
+    padding-right: 5px;
+}
+
+.assortList li{
+    line-height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.assortList li::before{
+    content: '\009B';
+    padding-right: 5px;
+}
+
+.assortList li:hover,
+.assortList li:active{
+    text-decoration: underline;
+    color: #bb9064;
+}
+
+.assortLeft_top{
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.assortLeft_top li{ 
+    color: #83521e;
+}
+
+.assort_more span{
+    color: #83521e;
+    padding-left: 5px;
+}
+
+.assort_more ul{
+    height: 0;
+    transform: rotateX(90deg);
+    transform-origin: top center;  
+}
+
+.assort_more.on ul{
+    height: 100%;
+    padding-bottom: 20px;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+
+.assort_more li{
+    color: #999;
+}
+
+/* ===== assortRight start ===== */
+.assortRight{
+    width: calc(100% - 150px);
+    padding-left: 48px;
+}
+
+.assortRigh_topImg{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.assortRigh_topImg img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .assortBox{
+        flex-direction: column;
+    }
+    .assortBox .assortList{
+        display: none;
+    }
+
+    .assortRight{
+        width: 100%;
+        padding-left: 0;
+    }  
+}
+
+
+@media only screen and (max-width: 414px){
+    .assortBox{
+        padding: 0 10px 10px;
+    }   
+}

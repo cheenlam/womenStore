@@ -1,0 +1,56 @@
+<div class="aboutBox">
+    <div class="crumbs">
+        <ul>
+            <li><span>首頁</span></li>
+            <li><span>關於我們</span></li>
+        </ul>         
+    </div>
+
+    <div class="aboutCnt">
+        <!-- ===== abtLeft start ===== -->
+        <div class="abtLeft">
+            <div class="abtmenu">
+                <h6>ABOUT</h6>
+                <p>BONJOUR KORE</p>
+                <span class="icon-cheveron-down"></span>
+            </div>
+
+            <ul>
+                <li class="on">品牌故事</li>
+                <li>經營理念</li>
+                <li>購物說明</li>
+                <li>常見問題</li>
+                <li>最新消息</li>
+                <li>聯絡我們</li>
+                <li>使用條款</li>
+                <li>隱私條款</li>
+                <li>版權聲明</li>
+            </ul>
+        </div>
+
+        <!-- ===== abtRight start ===== -->
+        <div class="abtRight">
+            <div>
+                <div class="abtTitle">品牌故事</div>
+
+                <!-- 文字編輯器區塊 -->
+                <div class="abtList">
+                   <img src="../img/about.jpg">
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+
+<script>
+    $('.abtLeft li').click(function(){
+        $('.abtLeft li').removeClass('on')
+        $(this).addClass('on')
+    })
+
+    $('.abtmenu').click(function(){
+        $(this).toggleClass('on')
+    })
+
+</script>

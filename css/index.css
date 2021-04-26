@@ -1,0 +1,1327 @@
+body {
+    font: 13px/18px "Open Sans", "Helvetica Neue", "Helvetica", "STHeitiTC-Light", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Arial", "sans-serif";
+}
+
+
+/* ===== header start ===== */
+
+.header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    position: relative;
+}
+
+.hd_searchIpt {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: rotateX(90deg);
+    transform-origin: center top;
+    transition: 0.5s;
+}
+
+.hd_searchIpt.on {
+    transform: rotateX(0deg);
+}
+
+.hd_searchIpt label {
+    width: 100%;
+    position: relative;
+    margin-right: 10px;
+}
+
+.hd_searchIpt input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333;
+}
+
+.hd_searchIpt input+span {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    color: #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    visibility: hidden;
+}
+
+.hd_searchIpt input:valid+span {
+    visibility: visible;
+}
+
+.hd_searchIpt>span {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hd_searchIpt>span:hover {
+    color: #999;
+}
+
+.hd_logo {
+    width: 200px;
+    margin-right: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.hd_logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.hd_cnt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hd_tool {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    align-self: flex-end;
+}
+
+.hd_tool ul {
+    display: flex;
+}
+
+.hd_tool li {
+    font-size: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.hd_tool li:hover {
+    color: #999;
+}
+
+.hd_tool li+li {
+    padding-left: 20px;
+}
+
+.hd_tool .hd_search:hover {
+    color: #333;
+}
+
+.hd_search span:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+.hd_search label {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.hd_search input+span {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    visibility: hidden;
+}
+
+.hd_search input:valid {
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.hd_search input:valid+span {
+    visibility: visible;
+}
+
+.hd_search input {
+    width: 0;
+    padding-right: 15px;
+    margin-right: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.hd_search:hover input,
+.hd_search:active input {
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.hd_car {
+    position: relative;
+}
+
+.hd_carCount {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #83521ed0;
+    position: absolute;
+    top: -12px;
+    right: -15px;
+}
+
+.hd_tool .hd_menuBar {
+    display: none;
+}
+
+.hd_menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.hd_menu li {
+    width: 80px;
+    font-size: 13px;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #a5a5a5;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hd_menu li+li{
+    margin-left: 10px;
+}
+
+.hd_menu li::before{
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #83521e;
+    background-color: #fff;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.hd_menu li:hover::before{
+    transform: translateY(0%);
+}
+
+.hd_menu li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #83521e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.hd_menu li:hover::after{
+    width: 90%;
+    transition: 0.5s;
+}
+
+
+/* ===== content start ===== */
+
+.content {
+    width: 100%;
+    min-height: calc(100% - 391px);
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ===== footer start ===== */
+
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.ft_top {
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ft_link {
+    display: flex;
+}
+
+.ft_link ul {
+    font-size: 12px;
+    color: #8d8d8d;
+}
+
+.ft_link ul+ul {
+    padding-left: 60px;
+}
+
+.ft_link li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.ft_link span {
+    margin-right: 5px;
+}
+
+.ft_link a {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3 linear;
+}
+
+.ft_link a:hover {
+    color: #aaa;
+}
+
+.ft_link a::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #8d8d8d;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    transition: 0.3s;
+}
+
+.ft_link a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.ft_link p {
+    font-family: Georgia;
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.ft_logo {
+    width: 150px;
+}
+
+.ft_forum img,
+.ft_logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.ft_bottom {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 10px;
+    color: #8d8d8d;
+}
+
+.copyright span {
+    color: #3493fb;
+}
+
+.ft_forum ul {
+    display: flex;
+}
+
+.ft_forum li {
+    width: 35px;
+    cursor: pointer;
+}
+
+.ft_forum li+li {
+    margin-left: 10px;
+}
+
+.ft_paper {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft_paper label {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.ft_paper input+span {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    bottom: 5px;
+    right: 5px;
+    margin: auto;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.ft_paper input+span:hover {
+    color: #333;
+}
+
+.ft_paper input:valid+span {
+    visibility: visible;
+}
+
+.ft_paper input {
+    width: 100%;
+    font-size: 15px;
+    color: #8d8d8d;
+    padding-left: 5px;
+    padding-right: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #999;
+}
+
+.ft_paper button {
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    border: 2px solid #333;
+    outline: none;
+    background-color: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.ft_paper button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+}
+
+.ft_paper button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.ft_paper button:hover::before {
+    border: 2px solid transparent;
+}
+
+
+/* ===== hd_carBox (購物車) start ===== */
+.hd_carBox {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.hd_carBox.on {
+    opacity: 1;
+    z-index: 999;
+}
+
+.hd_carCnt {
+    width: 500px;
+    padding: 50px 20px 30px 20px;
+    box-shadow: 0 0 4px #999;
+    background-color: #fff;
+}
+
+.hd_carCnt>span {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hd_carCnt>span:hover {
+    color: #666;
+}
+
+.hd_carCnt h5 {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #707070;
+    border-bottom: 1px solid #ddd;
+}
+
+.hd_carCnt ul {
+    max-height: 450px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+.hd_carCnt ul::-webkit-scrollbar {
+    width: 0;
+}
+
+.hd_carCnt li {
+    padding: 20px 20px 20px 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.hd_carCnt li>div:first-child {
+    display: flex;
+}
+
+.hd_carImg {
+    width: 60px;
+    position: relative;
+}
+
+.hd_carImg img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.hd_carImg span {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #83521ed0;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.hd_carTitle {
+    padding: 0 15px;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hd_carTotal tt,
+.hd_carTitle tt {
+    position: relative;
+}
+
+.hd_carTotal tt::before,
+.hd_carTitle tt:last-child::before {
+    content: 'NT$ ';
+    font-size: 12px;
+}
+
+.hd_carTitle tt+tt {
+    padding-left: 10px;
+    position: relative;
+}
+
+.hd_carTitle tt+tt::after {
+    content: '|';
+    position: absolute;
+    left: 0;
+}
+
+.hd_carTotal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.hd_carTotal tt {
+    font-size: 18px;
+    color: #83521e;
+}
+
+.hd_carTotal span {
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.hd_carTotal span:hover {
+    color: #666;
+}
+
+.hd_carBtn {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.hd_carBtn button {
+    width: 95%;
+    height: 40px;
+    border: 2px solid #333;
+    outline: none;
+    background-color: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.hd_carBtn button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.hd_carBtn button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.hd_carBtn button:hover::before {
+    border: 2px solid transparent;
+}
+
+
+/* ===== storeMenu (賣場清單) start ===== */
+
+.storeMenu {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 4px #999;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.storeMenu.on {
+    opacity: 1;
+    z-index: 999;
+}
+
+.menuCnt {
+    width: 500px;
+    max-height: 600px;
+    padding: 0 20px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+.menuCnt::-webkit-scrollbar {
+    width: 0;
+}
+
+.menuCnt>span {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menuCnt>span:hover {
+    color: #666;
+}
+
+.menuCnt h5 {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #707070;
+    border-bottom: 1px solid #ddd;
+}
+
+.menuSort {
+    padding-bottom: 50px;
+    font-size: 13px;
+    color: #333;
+}
+
+.menuSort h6 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+    font-weight: bold;
+    color: #999;
+    letter-spacing: 1.5px;
+}
+
+.menuList>li {
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.menuList>li:hover .menuTitle {
+    background-color: rgb(245, 245, 245);
+    background-color: #333;
+    color: #fff;
+}
+
+.menuList>li:hover .menuTitle tt {
+    color: rgb(206, 206, 29);
+}
+
+.menuTitle {
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menuTitle tt {
+    padding-left: 5px;
+    font-size: 10px;
+    color: #83521e;
+}
+
+.menuTitle.on span {
+    transform: rotate(180deg);
+}
+
+.menuTitle.on+.menuList_under {
+    height: unset;
+    transform: rotateX(0deg);
+    padding: 5px 0 20px;
+    transition: 0.5s;
+}
+
+.menuList_under {
+    width: 100%;
+    height: 0;
+    transform: rotateX(90deg);
+    transform-origin: top center;
+}
+
+.menuList_under li {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menuList_under li:hover {
+    background-color: #eee;
+    color: #333;
+}
+
+
+/* ===== linkTool start ===== */
+
+.linkTool {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    z-index: 99;
+}
+
+.linkTool li {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    transition: 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.linkTool li:hover {
+    opacity: 1;
+}
+
+.linkTool img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.goTop {
+    visibility: hidden;
+}
+
+.goTop.on {
+    visibility: unset;
+}
+
+
+/* ========== 共同設定 ========== */
+
+.commCard {
+    width: 100%;
+    padding: 10px 5px 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.commCard:hover,
+.commCard:active {
+    box-shadow: 0 0 5px #333;
+}
+
+.commCard:hover img,
+.commCard:active img {
+    transform: scale(1.05);
+}
+
+.commImg {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.commImg img {
+    width: 100%;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.commAdd,
+.commLike {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 5px 0 #999;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.commAdd {
+    bottom: 10px;
+}
+
+.commLike {
+    bottom: 50px;
+}
+
+.commAdd:hover,
+.commAdd:active,
+.commLike:hover,
+.commLike:active {
+    color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(255, 255, 255);
+}
+
+.commTitle {
+    width: 100%;
+    padding: 20px 5px 0;
+    font-size: 14px;
+}
+
+.commTitle h4 {
+    color: #999;
+}
+
+.commTitle h5 {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.commTitle .newPrice {
+    color: #ccc;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.commTitle .discPrice {
+    font-size: 14px;
+    color: #f00;
+}
+
+.commTitle .newPrice::before,
+.commTitle .discPrice::before {
+    content: 'NT$ ';
+}
+
+.commLayout {
+    padding-top: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commLayout_count span {
+    padding: 0 5px;
+    color: #83521e;
+}
+
+.commLayout_tool ul {
+    display: flex;
+    align-items: center;
+}
+
+.commLayout_tool li {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.commLayout_icons {
+    font-size: 20px;
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #f86666;
+}
+
+.commLayout_icons.on {
+    background-color: #bbb;
+    color: #fff;
+}
+
+.commLayout_icons:hover,
+.commLayout_icons:active {
+    opacity: 1;
+}
+
+.commLayout_tool select {
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid #999;
+    padding: 3px 30px 3px 5px;
+    outline: none;
+    font-size: 12px;
+}
+
+.commLayout_tool select:focus {
+    border: 1px solid #f86666;
+}
+
+.commLayout_tool option {
+    background-color: #f5dceb;
+    border: 1px solid #f86666;
+}
+
+.commList {
+    padding-top: 10px;
+}
+
+.commList ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.commList li {
+    width: calc(100% / 4);
+}
+
+.commList.on li {
+    width: 50%;
+}
+
+.commList.on .commCard {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.commList.on .commImg {
+    width: 150px;
+    height: 150px;
+    padding-bottom: unset;
+    position: unset;
+    flex-shrink: 0;
+}
+
+.commList.on .commTitle {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.commList.on .commLike {
+    right: 95px;
+    bottom: 10px;
+    left: unset;
+}
+
+.commList.on .commAdd {
+    right: 50px;
+    bottom: 10px;
+    left: unset;
+}
+
+
+/* 商品頁數按鈕列 */
+
+
+/* ===== commPage start ===== */
+
+.commPage {
+    padding-top: 50px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.commPage a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.commPage a:hover {
+    color: #999;
+}
+
+.commPage ul {
+    display: flex;
+}
+
+.commPage li+li {
+    margin-left: 15px;
+}
+
+.commPage li.on a {
+    color: #CA3C3C;
+    text-decoration: underline;
+}
+
+.commPage_prev {
+    margin-right: 15px;
+}
+
+.commPage_prev a::after {
+    content: '<';
+    padding-left: 8px;
+}
+
+.commPage_next {
+    margin-left: 15px;
+}
+
+.commPage_next a::before {
+    content: ">";
+    margin-right: 8px;
+}
+
+
+/* 訂單資訊 */
+/* ===== orderMsg_cnt ===== */
+.orderMsg_cnt {
+    padding: 20px 0 100px;
+}
+
+.orderMsg_cnt ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orderMsg_cnt li {
+    width: calc(100% / 2);
+    padding: 10px;
+}
+
+.orderCard {
+    min-height: 250px;
+    border: 1px solid #dfdfdf;
+}
+
+.orderCard .title {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: #FAFAFA;
+    color: #636363;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.orderCard .title span {
+    padding-right: 5px;
+}
+
+.orderCard ul {
+    padding-top: 10px;
+}
+
+.orderCard li {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #bbb;
+}
+
+.orderCard li+li {
+    padding-top: 0px;
+}
+
+.orderCard li h6 {
+    flex-shrink: 0;
+    color: #636363;
+}
+
+.orderCard li h6,
+.orderCard li p {
+    line-height: 25px;
+}
+
+
+/* ========== RWD 設定 ========== */
+
+@media only screen and (max-width: 1199px) {
+    .hd_logo {
+        width: 110px;
+    }
+    .hd_menu {
+        display: none;
+    }
+    .hd_cnt {
+        justify-content: center;
+    }
+    .hd_tool {
+        padding-bottom: 0;
+    }
+    .hd_tool .hd_menuBar {
+        display: block;
+    }
+    .hd_tool {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .commList.on li {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .ft_logo {
+        display: none;
+    }
+    .ft_link {
+        width: 100%;
+        flex-direction: column;
+    }
+    .ft_link ul+ul {
+        padding-left: 0;
+    }
+    .ft_link ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+    .ft_link ul p {
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 5px;
+    }
+    .ft_link li {
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+    .ft_bottom {
+        flex-direction: column-reverse;
+    }
+    .ft_forum,
+    .ft_paper {
+        width: 100%;
+        margin: 0 auto 40px;
+    }
+    .ft_forum ul {
+        justify-content: center;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .orderMsg_cnt>ul>li {
+        width: 100%;
+        padding: 0;
+    }
+    .orderCard {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .commList li {
+        width: calc(100% / 2);
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .hd_carBox,
+    .storeMenu {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(-100%);
+        background-color: transparent;
+    }
+    .hd_carBox.on,
+    .storeMenu.on {
+        transform: translateX(0%);
+    }
+    .menuClose,
+    .hd_carClose {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        cursor: pointer;
+    }
+    .menuClose::before,
+    .menuClose::after,
+    .hd_carClose::before,
+    .hd_carClose::after {
+        width: 35px;
+        height: 65px;
+        margin: auto;
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menuClose::before,
+    .hd_carClose::before {
+        content: '';
+        border-radius: 5px 0 0 5px;
+        background-color: #000;
+    }
+    .menuClose::after,
+    .hd_carClose::after {
+        content: '\00ab';
+        transform: rotate(0deg);
+    }
+    .menuCnt,
+    .hd_carCnt {
+        width: 80%;
+        min-width: 250px;
+        height: 100%;
+        max-height: 100%;
+        padding: 30px 10px;
+        background-color: #fff;
+    }
+    .menuCnt>span,
+    .hd_carCnt>span {
+        display: none;
+    }
+    .hd_carCnt ul {
+        max-height: calc(100% - 160px);
+    }
+    .hd_carCnt li {
+        flex-direction: column;
+    }
+    .hd_carCnt li>div:first-child {
+        align-items: center;
+    }
+    .hd_carTotal {
+        padding-top: 20px;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .hd_search:hover input {
+        width: 0;
+        border-bottom: 1px solid transparent;
+    }
+    .hd_logo {
+        margin-right: 0px;
+    }
+    .ft_right ul {
+        font-size: 12px;
+    }
+    .ft_right table {
+        font-size: 12px;
+    }
+    .linkTool {
+        right: 5px;
+    }
+    .linkTool li {
+        width: 35px;
+        height: 35px;
+    }
+    .linkTool li+li {
+        margin-top: 5px;
+    }
+    .commList li {
+        width: 100%;
+    }
+    .commList.on .commLike {
+        left: 170px;
+    }
+    .commList.on .commAdd {
+        left: 215px;
+    }
+}

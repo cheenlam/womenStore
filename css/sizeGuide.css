@@ -1,0 +1,107 @@
+.guideBox{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px 10px 50px;
+    letter-spacing: .2em;
+}
+
+.guideBox h2{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.guideTitle{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+.guideTitle h5{
+    padding: 0 10px;
+    font-size: 14px;
+    color: #656565;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.guideTitle:hover h5{
+    color: #111;
+}
+
+.guideTitle span{
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    color: #656565;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.guideTitle.on span{
+    transform: rotate(180deg);
+}
+
+.guideTitle.on+.guideMsg{
+    display: block;
+}
+
+.guideMsg{
+    font-size: 12px;
+    display: none;
+}
+
+.guideMsg table{
+    width: 100%;
+}
+
+.guideMsg tr{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.guideMsg tr:first-child{
+    border-bottom: 1px solid #000;
+}
+
+.guideMsg th{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    text-align: left;
+    font-weight: bold; 
+    color: #111;   
+}
+
+.guideMsg td{
+    height: 40px;
+    line-height: 40px;
+    color: #656565;
+    text-align: center;
+}
+
+.guideNote{
+    padding: 30px 10px 0;
+    line-height: 20px;
+    font-size: 12px;
+    color: #b6afaf;
+}
+
+.sizeImg{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sizeImg img{
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
+}
+

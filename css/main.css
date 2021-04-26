@@ -1,0 +1,414 @@
+/* mainImg start */
+.mainBox{
+    padding-bottom: 50px;
+}
+.mainBox .mainImg{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.mainBox .mainImg img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* topRell start */
+.mainBox .topRell{
+    width: 100%;
+    display: flex;
+}
+
+.mainBox .topRell_L{
+    width: 100%;
+    margin-right: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mainBox .topRell_L img{
+    vertical-align: middle;
+}
+
+.mainBox .topRell_L ul{
+    width: 400%;
+    display: flex;
+}
+
+.mainBox .topRell_L li{
+    width: 100%;
+    transition: 1s;
+}
+
+.mainBox .topRell_L img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainBox .topArrow_L,
+.mainBox .topArrow_R{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;   
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(51, 51, 51, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mainBox .topArrow_L{
+    left: 10px;
+}
+
+.mainBox .topArrow_R{
+    right: 10px;
+}
+
+.mainBox .topArrow_L:hover,
+.mainBox .topArrow_L:active,
+.mainBox .topArrow_R:hover,
+.mainBox .topArrow_R:active{
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px #333;
+}
+
+.mainBox .topRell_R{
+    width: 27.4%;
+    padding-left: 6px;
+}
+
+.mainBox .topRell_R ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainBox .topRell_R li{
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.mainBox .topRell_R span{
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    z-index: 2;
+}
+
+.mainBox .topRell_R li::before{
+    content: '';
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    border: 2px solid #fff; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); 
+}
+.mainBox .topRell_R li:nth-child(1)::before{
+    transform: rotate(10deg);
+}
+
+.mainBox .topRell_R img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: absolute;
+}
+
+
+/* topBanner start */
+.mainBox .topBanner{
+    width: 100%;
+    padding: 10px 0;
+}
+.mainBox .topBanner img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* newShow start */
+.mainBox .newShow ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainBox .newShow li{
+    width: calc(100% / 4);  
+}
+
+
+/* sortShow start*/
+.sortShow{
+    padding-top: 50px;
+}
+
+.sortSelect{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sortSelect ul{
+    display: flex;
+    justify-content: center;
+}
+
+.sortSelect li{
+    width: 80px;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #a5a5a5;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.sortSelect li+li{
+    margin-left: 10px;
+}
+
+.sortSelect li::before{
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #83521e;
+    background-color: #fff;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.sortSelect li:hover::before{
+    transform: translateY(0%);
+}
+
+.sortSelect li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #83521e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sortSelect li:hover::after{
+    width: 90%;
+    transition: 0.5s;
+}
+
+.sortList ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sortList li{
+    width: calc(100% / 4);
+}
+
+
+/* actRell start */
+.ladyRell,
+.kidsRell{
+    width: 100%;
+    overflow: hidden;
+}
+
+.kidsRell{
+    padding-top: 10px;
+}
+
+.ladyRell ul,
+.kidsRell ul{
+    width: 400%;
+    display: flex;
+}
+
+.ladyRell li,
+.kidsRell li{
+    width: 100%;
+}
+
+.ladyRell img,
+.kidsRell img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/* ========== 共同設定 ========== */
+.mainTitle{
+    width: 100%;
+    font-size: 25px;
+    color: #333;
+    padding: 20px 0;
+    margin: 80px 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+.mainTitle h5{
+    font-weight: bold;
+}
+
+.mainTitle h5 span{
+    font-weight: normal;
+    font-size: 16px;
+    color: #f00;
+    animation: titleAm 2s infinite linear;
+}
+
+@keyframes titleAm{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.mainTitle p{
+    padding-top: 5px;
+    font-size: 10px;
+    color: #a5a5a5;
+}
+
+.mainTitle::before{
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #f00;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.moreBtn{
+    width: 250px;
+    margin: 30px auto;
+}
+
+.moreBtn button{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #333;
+    outline: none;
+    background-color: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.moreBtn button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+}
+
+.moreBtn button:hover{
+    background-color: #333;
+    color: #fff;
+}
+.moreBtn button:hover::before{
+    border: 2px solid transparent;
+}
+
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .mainBox .topRell,
+    .newShow,.actRell{
+        padding: 0 10px;
+    }
+    .topBanner{
+        padding: 10px;
+    }
+
+    .sortShow{
+        padding: 50px 10px 0;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .mainBox .newShow li,
+    .sortList li{
+        width: calc(100% / 2);
+    }
+}
+
+@media only screen and (max-width: 599px){
+    .mainBox .topRell_R span{
+        font-size: 14px;
+    }
+    .mainBox .topArrow_L,
+    .mainBox .topArrow_R{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    } 
+
+    .sortSelect ul{
+        flex-wrap: wrap;
+    }
+    .sortSelect li{
+        width: calc(100% / 3);
+        margin: 10px 0;
+    }
+    .sortSelect li+li{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    .mainBox .newShow li,
+    .sortList li{
+        width: 100%;
+    }
+
+    .mainTitle{
+        font-size: 20px;
+        margin: 20px 0 20px;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+    .mainBox .topRell_R span{
+        font-size: 10px;
+    }
+ 
+}
+
+
+

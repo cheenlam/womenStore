@@ -1,0 +1,1102 @@
+.mbrBox{
+    padding: 0 10px 50px;
+}
+
+.mbrBox .crumbs{
+    padding: 10px 0;
+}
+
+.mbrBody>div{
+    display: none;
+}
+
+.mbrBody>div.on{
+    display: block;
+}
+
+
+/* ===== mbrName start ===== */
+.mbrName{
+    padding: 20px 0 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.mbrName span{
+    padding-left: 5px;
+    color: #3493fb;
+}
+
+.mbrName a{
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+    color: #b0b0b0;
+    transition: color 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.mbrName a::before{
+    content: attr(data-hover);
+    width: 100px; 
+    background-color: #fff;
+    color: #83521e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.mbrName a:hover::before{
+    transform: translateY(0%);
+}
+
+
+/* ===== mbrContent start ===== */
+.mbrContent{
+    width: 100%;
+    padding: 40px 10px;
+    border: 1px solid #ddd;
+    margin: 50px auto 50px;
+    position: relative;
+}
+
+/* mbrSelect start */
+.mbrSelect{
+    width: calc(100% + 2px);
+    position: absolute;
+    top: -45px;
+    right: -1px;
+}
+
+.mbrSelect ul{
+    width: 100%;
+    display: flex;
+}
+
+.mbrSelect li{
+    width: calc(100% / 4);
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-top: 3px solid #CCC7C7;
+    color: #b0b0b0;
+    background-color: #F4F4F4;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.mbrSelect li:last-child{
+    border-right: 1px solid #ddd;
+}
+
+.mbrSelect li.on{
+    color: #706e6c;
+    background-color: #fff;
+    border-top: 3px solid #c0a886;
+    border-bottom: 1px solid #fff;
+}
+
+/* ===== mbrMsg start (個人資訊) ===== */
+.mbrMsg ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.mbrMsg li{
+    width: 50%;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mbrMsg input + span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.mbrMsg span:hover{
+    color: #666;
+}
+
+.mbrMsg input:valid + span{
+    visibility: visible;
+}
+
+.mbrMsg input{
+    width: calc(100% - 80px);
+    height: 35px;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+    color: #666;
+}
+
+.mbrMsg input:focus,
+.mbrMsg select:focus{
+    border: 1px solid #3493fb;
+}
+
+.mbrMsg select{
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+}
+
+.mbrMsg label{
+    width: 80px;
+    flex-shrink: 0;
+    color: #666;
+    letter-spacing: 1.5px;
+}
+
+.mbrMsg span{
+    color: #3493fb;
+    padding-right: 10px;
+}
+
+.mbrAdd{
+    line-height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mbrAdd input{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.mbrMsg .mbrPwd{
+    height: 35px;
+}
+
+.mbrPwd span{
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.mbrPwd span:hover{
+    color: #666;
+    text-decoration: underline;
+}
+
+.mbrMsg_btn{
+    padding-top: 50px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mbrMsg_btn button{
+    height: 35px;
+    padding: 0 10px;
+    color: #969696;
+    border: 1px solid #969696;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mbrMsg_btn button:hover{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+}
+
+.mbrMsg_btn button+button{
+    margin-left: 10px;
+}
+
+/* ===== mbrCollect start (我的收藏) ===== */
+.mbrCollect .mbrImg{
+    width: 150px;
+    margin-right: 15px;
+}
+
+.mbrCollect .mbrImg img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.mbrCollect ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mbrCollect li{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    position: relative;
+}
+
+.mbrCollect li::before{
+    content: '';
+    width: 95%;
+    height: 1px;
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.collect_cnt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collect_title{
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.collect_title span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 5px #b0b0b0;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #b0b0b0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.collect_title span:hover{
+    color: #333;
+}
+
+.collect_msg{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.collect_price{
+    flex-shrink: 0;
+}
+
+.collect_price .newPrice{
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.collect_price .discPrice{
+    font-size: 16px;
+    color: #f00;
+}
+
+.collect_price .newPrice::before,
+.collect_price .discPrice::before{
+    content: 'NT$ ';
+}
+
+.collect_select{
+    height: 35px;
+    display: flex;
+}
+
+.collect_select select{
+   width: 70px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   color: #969696;
+}
+
+.collect_select select:focus{
+    border: 1px solid #3493fb;
+}
+
+.collect_select select+select{
+    margin-left: 5px;
+}
+
+.collect_btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.collect_btn button{
+    width: 95px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #969696;
+    color: #969696;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.collect_btn button:hover{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+}
+
+.collect_addCar{
+    margin-top: 5px;
+}
+
+/* ===== mbrOrder start (訂單查詢) ===== */
+.mbrOrder>div{
+    display: none;
+}
+
+.mbrOrder>div.on{
+    display: block;
+}
+
+/* order_select start */
+.order_select{
+    max-width: 800px;
+    padding: 20px 0;
+    margin: auto;
+    font-size: 14px;
+    color: #666;
+}
+
+.order_select li{
+    display: flex;
+    padding-bottom: 25px;
+}
+
+.order_select label{
+    height: 35px;
+    line-height: 35px;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+.order_select li>div{
+    width: 100%;
+}
+
+.order_ipt{
+    position: relative;
+}
+
+.order_ipt span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: color 0.3 linear;
+}
+
+.order_ipt span:hover{
+    color: #666;
+}
+
+.order_ipt input + span{
+    visibility: hidden;
+}
+
+.order_ipt input:valid + span{
+    visibility: visible;
+}
+
+.order_ipt input{
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+}
+
+.order_ipt input:focus{
+    border: 1px solid #3493fb;
+}
+
+.order_point{
+    font-size: 10px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    color: #a3a3a3;
+}
+.order_point p{
+    padding-left: 5px;
+}
+
+.order_btn{
+    padding-top: 50px;
+    text-align: right;
+}
+
+.order_btn button{
+    width: 95px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #969696;
+    color: #969696;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.order_btn button:hover{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+}
+
+/* order_msg start */
+.order_msg li+li{
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.orderMsg_top{
+    color: #666;
+    text-align: center;
+}
+
+.orderMsg_top h6{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3493fb;
+    padding-bottom: 20px;
+}
+
+.fettle_1,
+.fettle_2,
+.fettle_3,
+.fettle_4{
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.fettle_1{ background-color: #f57c66; }
+.fettle_2{ background-color: #999797; }
+.fettle_3{ background-color: #7ace70; }
+.fettle_4{ background-color: #f8c55f; }
+
+.orderMsg_top p{
+    letter-spacing: 1px;
+}
+
+.orderMsg_List{
+    position: relative;
+}
+
+.orderMsg_List h5{
+    font-size: 18px;
+    color: #333;
+    font-family: 'Playfair Display';
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.orderMsg_List table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.orderMsg_List tr{
+    border-bottom: 1px solid #eee;
+}
+
+.orderMsg_List tr:first-child{
+    border-bottom: 1px solid #999;
+}
+
+.orderMsg_List th{
+    width: 10%;
+    padding: 10px 0;
+}
+
+.orderMsg_List th:first-child{
+    width: 40%;
+    text-align: left;
+}
+
+.orderMsg_List td{
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.orderMsg_List td:first-child{
+    display: flex;
+    text-align: left;
+}
+
+.orderMsg_Img{
+    width: 60px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.orderMsg_Img img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.orderMsg_List td>p{
+    color: #83521e;
+}
+
+.orderMsg_List td>p::before{
+    content: 'NT$ ';
+}
+
+.orderMsg_count{
+    padding: 80px 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.orderMsg_count ul{ 
+    width: 300px;
+}
+
+.orderMsg_count li{
+    line-height: 20px;
+    font-size: 10px;
+    display: flex;
+    color: #aaa;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderMsg_count li+li{
+    padding: 0;
+}
+
+.orderMsg_count span{
+    font-size: 10px;
+}
+
+.orderMsg_count span::before{
+    content: 'NT$ ';
+    font-size: 10px;
+}
+
+.orderMsg_count li::before{
+    content: attr(data-title);
+    font-size: 10px;
+}
+
+.orderMsg_count li:nth-last-child(2){
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #999;
+}
+
+.orderMsg_count .checkTotal{
+    padding-top: 10px;
+}
+
+.orderMsg_count .checkTotal span{
+    font-size: 20px;
+    color: #83521e;
+}
+
+/* ===== mbrHistory start (購物紀錄) ===== */
+.mbrHistory{
+    width: 100%;
+    padding: 0 10px 40px;
+    overflow-x: auto;
+}
+
+.mbrHistory table{
+    width: 100%;
+    color: #636363;
+    font-size: 12px;
+}
+
+.mbrHistory th,
+.mbrHistory td{
+    height: 40px;
+    min-height: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.mbrHistory th{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.mbrHistory a{
+    color: #3493fb;
+    text-decoration: underline;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mbrHistory a:hover{
+    color: #636363;
+}
+
+.mbrHistory tt::before{
+    content: 'NT$ ';
+}
+
+.mbrHistory tr:nth-child(even) td{
+    background-color: #F9F9F9;
+}
+
+.mbrHistory p{
+    padding-top: 20px;
+    font-size: 10px;
+    color: #A94442;
+}
+
+.history_btn{
+    width: 100%;
+    padding-top: 50px;
+    text-align: right;
+}
+
+.history_btn button{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #969696;
+    color: #969696;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.history_btn button:hover{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+}
+
+/* ===== orderStatus start (訂單狀態說明視窗) ===== */
+.orderStatus{
+    width: fit-content;
+    height: 90%;
+    padding-top: 50px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 0 8px #333;
+    display: none;
+}
+
+.orderStatus.on{
+    display: block;
+}
+
+.orderStatus>span{
+    font-size: 25px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.orderStatus>span:hover{
+    color: #333;
+}
+
+.statusClose{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+  }
+.statusClose::before,
+.statusClose::after{
+    width: 60px;
+    height: 35px;
+    margin: auto;
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statusClose::after{
+    content: '\00ab';
+    transform:  rotate(90deg);
+}
+.statusClose::before{
+    content: '';
+    border-radius: 5px 5px 0 0;
+    background-color: #000;
+}
+
+.statusCnt{
+    width: 100%;
+    width: 800px;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 1;
+    -ms-overflow-style: none;
+    letter-spacing: .2em;
+}
+
+.statusCnt::-webkit-scrollbar {
+    display: none;
+}
+
+.statusCnt h6{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3493fb; 
+}
+
+.statusCnt ul{
+    padding-top: 10px;
+    padding-left: 20px;
+    list-style-type: decimal; 
+}
+
+.statusCnt li{
+    padding: 5px;
+    line-height: 30px;
+}
+
+.statusCnt p{
+    display: inline;
+    font-size: 14px;
+}
+
+/* ===== mbrSignout start (會員登出視窗) ===== */
+.mbrSignout{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s; 
+}
+
+.mbrSignout.on{
+    opacity: 1;
+    z-index: 9999;
+}
+
+.signoutCnt{
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.signoutCnt>div{
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signoutCnt h5{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.signoutCnt p{
+    color: #999;
+}
+
+.signoutCnt button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    color: #3493fb;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signoutCnt button:hover{
+    background-color: #3493fb;
+    color: #fff;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .mbrCollect li{
+        width: calc(100% / 3);
+        display: block;
+    }
+
+    .collect_title span{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .collect_title{
+        margin: 10px 0 20px;
+    }
+
+    .collect_select{
+        display: unset;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+    }
+
+    .collect_select select{
+        height: 30px;
+        display: block;
+    }
+
+    .collect_select select+select{
+        margin-left: 0;
+        margin-top: 5px;
+    }  
+  
+}
+
+@media only screen and (max-width: 970px){
+    .orderMsg_List h5{
+        padding-top: 80px;
+        position: unset;
+        top: 0;
+        left: 0;
+    }
+
+    .orderMsg_List th{
+        display: none;
+    }
+
+    .orderMsg_List tr{
+        border: 1px solid #eee;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .orderMsg_List tr:first-child{
+        border:none;
+    }
+
+    .orderMsg_List tr + tr{
+        margin-top: 10px;
+    }
+
+    .orderMsg_List td{
+        width: calc(100% / 3);
+        padding: 5px;
+        display: flex;
+    }
+
+    .orderMsg_List td:first-child{
+        width: 100%;
+        padding: 10px 45px 10px 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .orderMsg_List td::before{
+        content: attr(data-title);
+        color: #A49178;
+    }
+
+    .orderMsg_count ul{ 
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .mbrBox{
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    .mbrBox .crumbs{
+        padding: 10px;
+    }
+
+    .mbrName{
+        padding: 20px 10px 5px;
+    }
+
+    .mbrContent{
+        border: none;
+    }
+
+    .mbrSelect{
+        width: 100%;
+        right: 0;
+    }
+
+    .mbrSelect li:last-child{
+        border-right: none;
+    }
+
+    .mbrMsg li{
+        width: 100%;
+    }
+    
+    .mbrCollect li{
+        width: 50%;
+    } 
+    
+    .mbrHistory tr{
+        width: 100%;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mbrHistory th{
+        display: none;
+    }
+
+    .mbrHistory td{
+        width: 100%;
+        height: unset;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #eee;
+        border-bottom: 1px solid #fff;
+    }
+
+    .mbrHistory td::before{
+        content: attr(data-title);
+        color: #A94442;
+        font-weight: bold;
+    }
+
+    .mbrHistory tr:nth-child(even) td{
+        background-color: #eee;
+    }  
+}
+
+@media only screen and (max-width: 850px){
+    .orderStatus{
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: none;
+    }
+
+    .orderStatus.on{
+       display: flex;
+       justify-content: center;
+    }
+  
+    .orderStatus>span{
+      display: none;
+    }
+  
+    .statusClose{
+      display: block;
+    }
+  
+    .statusCnt{
+      width: 100%;
+      max-height: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .mbrCollect li{
+        width: 100%;
+    } 
+}
+
+@media only screen and (max-width: 500px){
+    .orderMsg_List td{
+        width: calc(100% / 2);
+    }
+}
+
+@media only screen and (max-width: 414px){
+    .mbrMsg li{
+        padding: 0 10px;
+    }
+    .mbrMsg_btn{
+        padding-right: 10px;
+    }
+
+    .mbrSelect{
+        font-size: 12px;
+    }
+    .order_select li{
+        flex-direction: column;
+    } 
+}
+
+

@@ -1,0 +1,259 @@
+<div class="loginBox">
+    <div class="loginContent">
+        <div class="loginSelect">
+            <ul>
+                <li class="on">會員登入</li>
+                <li>手機號碼註冊</li>
+            </ul>
+        </div>
+        <div class="loginBody">
+            <!-- ===== loginLeft start ===== -->
+            <div class="loginLeft">
+                <div class="userLogin_L userLogin on">
+                    <form>
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="text" placeholder="請輸入Email / 手機號碼" required>
+                                    <i class="fas fa-times-circle"></i>
+                                </label>
+                                <p class="error">請輸入正確的 Email / 手機號碼格式</p>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="password" minlength="6" maxlength="20" placeholder="請請輸入密碼（6-20英數字）" required>
+                                     <i class="fas fa-times-circle"></i>
+                                </label>
+                                <p class="error">請輸入6-20碼英數字密碼</p>
+                            </li>
+                            <li><button>登入</button></li>
+                            <li class="loginTool">
+                                <div>
+                                    <label for="rmb">
+                                        <div>
+                                            <input type="checkbox" id="rmb">
+                                            <h6>✓</h6>
+                                        </div>       
+                                        <span>記住我</span>
+                                    </label>        
+                                </div>
+                                <div><a href="#">忘記密碼?</a></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="userReg_L userReg">
+                    <div class="regPage_1">
+                        <ul>
+                            <li class="userReg_title">
+                                <h5>加入專屬會員</h5>
+                                <p>我們將發送簡訊驗證碼至您的手機內</p>
+                            </li>
+                            <li class="regStatus">
+                                <ul>
+                                    <li class="on">
+                                        <div class="statusBall">1</div>
+                                    </li>
+                                    <li>
+                                        <div class="statusBall">2</div>
+                                    </li>
+                                    <li>
+                                        <div class="statusBall">3</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="userReg_ipt">
+                                <label>
+                                    <span>TW +886</span>
+                                    <input type="number" placeholder="請輸入手機號碼" required>
+                                    <i class="fas fa-times-circle"></i>
+                                </label>
+                                <p class="error">請輸入正確的 Email / 手機號碼格式</p>
+                            </li>
+                            <li class="userReg_btn" id="regBtn_1">
+                                <button>下一步</button>
+                                <p>收到簡訊驗證碼後，請依照步驟完成驗證註冊</p>
+                            </li>
+                        </ul> 
+                    </div>
+
+                    <div class="regPage_2">
+                        <ul>
+                            <li class="userReg_title">
+                                <h5>已發送簡訊驗證碼到您的手機</h5>
+                                <p>請輸入簡訊內4位數驗證碼</p>
+                            </li>
+                            <li class="regStatus">
+                                <ul>
+                                    <li class="on">
+                                        <div class="statusBall">1</div>
+                                    </li>
+                                    <li class="on">
+                                        <div class="statusBall">2</div>
+                                    </li>
+                                    <li>
+                                        <div class="statusBall">3</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="userReg_ipt">
+                                <h5>您註冊的手機號碼為<span>0912345678</span></h5>
+                                <label>
+                                    <input type="tel" placeholder="驗證碼" maxlength="4" required>
+                                    <i class="fas fa-times-circle"></i>
+                                </label>
+                                <p class="error">請輸入正確驗證碼</p>
+                            </li>
+                            <li class="userReg_btn" id="regBtn_2">
+                                <button>下一步</button>
+                                <p>輸入驗證碼後，請依照步驟完成驗證註冊</p>
+                            </li>
+                        </ul>
+                    </div>  
+                    
+                    <div class="regPage_3">
+                        <ul>
+                            <li>
+                                <li class="userReg_title">
+                                    <h5>設定登入密碼</h5>
+                                    <p>設定6-20碼英數字密碼</p>
+                                </li>
+                            </li>
+                            <li class="regStatus">
+                                <ul>
+                                    <li class="on">
+                                        <div class="statusBall">1</div>
+                                    </li>
+                                    <li class="on">
+                                        <div class="statusBall">2</div>
+                                    </li>
+                                    <li class="on">
+                                        <div class="statusBall">3</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="userReg_ipt">
+                                <label>
+                                    <input type="password" minlength="6" maxlength="20" placeholder="請請輸入密碼（6-20英數字）" required>
+                                     <i class="fas fa-times-circle"></i>
+                                </label>
+                                <p class="error">請輸入6-20碼英數字密碼</p>
+                            </li>
+                            <li class="userReg_btn" id="regBtn_3">
+                                <button>完成</button>
+                                <p>您的註冊即將完成</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== loginRight start ===== -->
+            <div class="loginRight">  
+                <div class="loginRight_fb">
+                    <div class="userLogin on">
+                        <div class="fb_btn">
+                            <a href="#">
+                                <img src="img/f_icons.svg">
+                            </a>
+                            <span>使用facebook快速登入</span>
+                        </div>
+                    </div>
+                    <div class="userReg">
+                        <div class="fb_btn">
+                            <a href="#">
+                                <img src="img/f_icons.svg">
+                            </a>
+                            <span>使用facebook快速註冊</span>
+                        </div>
+                    </div>
+    
+                    <div class="loginRight_title">
+                        <p>當您擁有帳號時</p>
+                        <p>代表您同意本站
+                            <tt><a href="#">使用條款</a></tt>
+                            與
+                            <tt><a href="#">隱私條款</a></tt>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="loginRight_code">
+                    <button disabled>重發驗證碼 <span>(<tt>60</tt>)</span></button>       
+                    <p>提醒您！若收不到驗證簡訊，請確認您的手機號碼是否輸入正確，或曾經向電信公司申請拒收商業簡訊，可能造成無法收取驗證簡訊通知。</p>
+                </div>    
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    $('.loginSelect li').click(function() {
+        $('.loginSelect li').removeClass('on')
+        $(this).addClass('on')
+
+        if($('.loginSelect li:eq(0)').hasClass('on')){
+            $('.userLogin').addClass('on')
+            $('.userReg').removeClass('on')
+            clearInterval(time)
+            $('.loginRight_code tt').text(60)
+            $('.loginBody').removeClass('onPage2')
+        }else{
+            $('.userLogin').removeClass('on')
+            $('.userReg').addClass('on')
+        }
+    })
+
+
+    $('.loginLeft input').focus(function() {
+        $(this).siblings('.fas').css('visibility', 'visible')
+    }).blur(function() {
+        if ($(this).val() == '') {
+            $(this).siblings('.fas').css('visibility', 'hidden')
+        }
+    })
+    $('.loginLeft label .fas').click(function() {
+        $(this).siblings('input').val('')
+    })
+
+
+    $('#regBtn_1').click(function(){
+        $('.loginBody').addClass('onPage2')
+        codeTimer()
+    })
+    $('#regBtn_2').click(function(){
+        $('.loginBody').removeClass('onPage2')
+        $('.loginBody').addClass('onPage3')
+        clearInterval(time)
+        $('.loginRight_code tt').text(60)
+    })
+    $('#regBtn_3').click(function(){
+        $('.loginBody').removeClass('onPage2')
+        $('.loginBody').removeClass('onPage3')
+    })
+
+    // 驗證碼按鈕倒數計時
+    var time;
+    function codeTimer(){
+        var x = parseInt($('.loginRight_code tt').text()) 
+        time = setInterval(function(){
+            x--;
+            $('.loginRight_code tt').text(x)
+            if(x == 0){
+                clearInterval(time)
+                $('.loginRight_code button').removeAttr('disabled')  
+            }
+        },10)
+    }
+
+
+    $('.fb_btn').click(function(){
+        mainInclude('page/member.html')
+    })
+    $('.loginTool>div a').click(function(){
+        mainInclude('page/forget.html')
+    })
+
+</script>

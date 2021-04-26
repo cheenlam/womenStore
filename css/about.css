@@ -1,0 +1,152 @@
+.aboutBox{
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.aboutCnt{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+/* ===== abtLeft start ===== */
+.abtLeft{
+    width: 200px;
+}
+
+.abtmenu{
+    height: 45px;
+    margin-bottom: 20px;
+    letter-spacing: .05em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abtmenu span{
+    display: none;
+}
+
+.abtLeft li{
+    padding-left: 10px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.abtLeft li.on,
+.abtLeft li:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+/* ===== abtRight start ===== */
+.abtRight{
+    width: calc(100% - 200px);
+    padding: 0 10px;
+}
+
+.abtTitle{
+    height: 45px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.abtTitle::before{
+    content: '';
+    width: 3px;
+    height: 30px;
+    background-color: rgb(74, 78, 92);
+    border-radius: 40% / 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.abtList{
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.abtList img{
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .aboutCnt{
+        flex-direction: column;
+    }
+    .abtLeft{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .abtmenu{
+        border: 1px solid #ccc;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .abtmenu:hover{
+        background-color: rgb(74, 78, 92);
+        color: #fff;
+    }
+
+    .abtmenu.on+ul{
+        height: auto;
+        transform: rotateX(0deg);
+    }
+
+    .abtmenu.on span{
+        transform: rotate(180deg);
+    }
+
+    .abtmenu span{
+        display: block;
+        font-size: 20px;
+        transform: rotate(0deg);
+        transition: all 0.3s, color 0s;
+    }
+
+    .abtmenu p{
+       padding: 0 10px;
+    }
+
+    .abtLeft ul{
+        height: 0;
+        transform: rotateX(90deg);
+        transform-origin: center top;
+        transition: 0.5s;
+    }
+
+    .abtLeft li{
+        padding: 5px 10px;
+    }
+
+    .abtLeft li.on,
+    .abtLeft li:hover{
+        text-decoration: none;
+        background-color: #eee;
+    }
+  
+    .abtRight{
+        width: 100%;
+    }
+}
+
+
+
